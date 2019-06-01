@@ -1,5 +1,5 @@
 {
-  "name": "react-slack-clone",
+  "name": "chat-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,15 +10,16 @@
     "moment": "^2.22.2",
     "react": "^16.4.1",
     "react-avatar-editor": "^11.0.4",
-    "react-color": "^2.14.1",
+    "react-color": "^2.17.3",
     "react-dom": "^16.4.1",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "^1.1.5",
+    "react-scripts": "^3.0.1",
     "redux": "^4.0.0",
     "redux-devtools-extension": "^2.13.5",
     "semantic-ui-css": "^2.3.3",
     "semantic-ui-react": "^0.82.1",
+    "typescript": "^3.4.5",
     "uuid": "^3.3.2"
   },
   "scripts": {
@@ -26,5 +27,30 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reedbarger/react-slack-clone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reedbarger/react-slack-clone/issues"
+  },
+  "homepage": "https://github.com/reedbarger/react-slack-clone#readme",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {}
 }

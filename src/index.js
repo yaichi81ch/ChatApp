@@ -21,15 +21,17 @@ const store = createStore(rootReducer, composeWithDevTools());
 class Root extends React.Component {
 	componentDidMount() {
 		console.log(this.props.isLoading);
+		const { user } = this.props;// 追加
 		firebase.auth().onAuthStateChanged(user => {
 			if(user) {
-				this.props.history.push("/");
 				this.props.setUser(user);
+				this.props.history.push("/");
+
 			} else {
 				this.props.history.push("/login");
 				this.props.clearUser();
 			}
-		})
+		});
 	}
 
 	render() {
@@ -44,6 +46,7 @@ class Root extends React.Component {
 }
 
 const mapStateToProps = state => ({
+	user: state.user.currentUser,// 追加
 	isLoading: state.user.isLoading
 });
 

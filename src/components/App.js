@@ -7,7 +7,6 @@ import ColorPanel from './ColorPanel/ColorPanel';
 import SidePanel from './SidePanel/SidePanel';
 import Messages from './Messages/Messages';
 import MetaPanel from './MetaPanel/MetaPanel';
-import { setUser } from '../actions';
 
 const App = ({ currentUser }) => {
   return (
@@ -27,4 +26,4 @@ const mapStateToProps = state => ({
   currentUser: state.user.currentUser
 })
 
-export default connect(mapStateToProps, { setUser })(App);
+export default connect(mapStateToProps)(App);

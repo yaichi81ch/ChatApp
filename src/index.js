@@ -21,12 +21,11 @@ const store = createStore(rootReducer, composeWithDevTools());
 class Root extends React.Component {
 	componentDidMount() {
 		console.log(this.props.isLoading);
-		const { user } = this.props;// 追加
+		// const { user } = this.props;// 追加
 		firebase.auth().onAuthStateChanged(user => {
 			if(user) {
 				this.props.setUser(user);
 				this.props.history.push("/");
-
 			} else {
 				this.props.history.push("/login");
 				this.props.clearUser();
@@ -35,7 +34,9 @@ class Root extends React.Component {
 	}
 
 	render() {
-		return this.props.isLoading ? <Spinner /> : (
+		return this.props.isLoading ? (
+			<Spinner />
+		) : (
 			<Switch>
 				<Route path="/" exact component={App} />
 				<Route path="/login" component={Login} />
@@ -46,7 +47,7 @@ class Root extends React.Component {
 }
 
 const mapStateToProps = state => ({
-	user: state.user.currentUser,// 追加
+	// user: state.user.currentUser,// 追加
 	isLoading: state.user.isLoading
 });
 
